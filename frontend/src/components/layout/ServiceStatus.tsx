@@ -17,7 +17,7 @@ export function ServiceStatus() {
     <span className={`service-status service-status--${state}`} role="status" aria-live="polite">
       <span className={`status-dot status-dot--${state}`} aria-hidden="true" />
       <span>{label}</span>
-      {state === 'starting' && <span className="service-detail">Starting the verification service… The first request may take a little longer.</span>}
+      {state === 'starting' && <span className="startup-note">First visit may take 40–60 seconds</span>}
       {state === 'unavailable' && <span className="service-detail">The verification service is unavailable. Check your connection and try again shortly.</span>}
     </span>
   )
