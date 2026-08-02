@@ -10,7 +10,7 @@ Create a Supabase project, open database connection settings, and copy the direc
 
 ## Render backend
 
-Create a Python web service with repository root directory `backend`, build command `pip install -r requirements.txt`, and start command `alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT`. The included `render.yaml` expresses the same settings. Configure `APP_ENV=production`, `DATABASE_URL`, `FRONTEND_URL`, `LLM_PROVIDER`, `GEMINI_API_KEY`, `GEMINI_MODEL`, and `ENABLE_LLM`. Health path is `/api/health`.
+The root `render.yaml` Blueprint creates the Python service with repository root directory `backend`, build command `pip install -r requirements.txt`, and start command `alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT`. Configure the prompted `DATABASE_URL`, `FRONTEND_URL`, and `GEMINI_API_KEY` secrets. Health path is `/api/health`.
 
 ## Vercel frontend
 
