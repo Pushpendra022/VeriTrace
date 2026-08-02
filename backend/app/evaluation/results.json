@@ -1,0 +1,180 @@
+{
+  "metrics": {
+    "cases": 22,
+    "correct": 17,
+    "overall_verdict_accuracy": 0.7727,
+    "supported_precision": 0.75,
+    "contradicted_precision": 0.7778,
+    "not_found_precision": 0.75,
+    "needs_review_precision": 1.0,
+    "quote_verification_rate": 1.0,
+    "numeric_mismatch_detection_rate": 0.75,
+    "json_validation_success_rate": 1.0,
+    "confusion": {
+      "SUPPORTED->SUPPORTED": 6,
+      "CONTRADICTED->CONTRADICTED": 7,
+      "CONTRADICTED->SUPPORTED": 2,
+      "NOT_FOUND->NOT_FOUND": 3,
+      "NEEDS_REVIEW->CONTRADICTED": 1,
+      "NEEDS_REVIEW->NOT_FOUND": 1,
+      "SUPPORTED->CONTRADICTED": 1,
+      "NEEDS_REVIEW->NEEDS_REVIEW": 1
+    }
+  },
+  "cases": [
+    {
+      "id": "exact-revenue",
+      "source": "Total revenue reached $11.4 million.",
+      "claim": "Total revenue reached $11.4 million.",
+      "expected": "SUPPORTED",
+      "predicted": "SUPPORTED"
+    },
+    {
+      "id": "paraphrase-growth",
+      "source": "Revenue increased 18% year over year.",
+      "claim": "Year-over-year revenue growth was 18%.",
+      "expected": "SUPPORTED",
+      "predicted": "SUPPORTED"
+    },
+    {
+      "id": "numeric-mismatch",
+      "source": "Revenue reached $11.4 million.",
+      "claim": "Revenue reached $14.2 million.",
+      "expected": "CONTRADICTED",
+      "predicted": "CONTRADICTED"
+    },
+    {
+      "id": "percentage-mismatch",
+      "source": "Revenue increased 18%.",
+      "claim": "Revenue increased 22%.",
+      "expected": "CONTRADICTED",
+      "predicted": "CONTRADICTED"
+    },
+    {
+      "id": "date-mismatch",
+      "source": "The acquisition closed on March 4, 2025.",
+      "claim": "The acquisition closed on March 4, 2024.",
+      "expected": "CONTRADICTED",
+      "predicted": "CONTRADICTED"
+    },
+    {
+      "id": "currency-mismatch",
+      "source": "Sales were \u00e2\u201a\u00ac8 million.",
+      "claim": "Sales were $8 million.",
+      "expected": "CONTRADICTED",
+      "predicted": "CONTRADICTED"
+    },
+    {
+      "id": "unit-mismatch",
+      "source": "The facility covers 40,000 square feet.",
+      "claim": "The facility covers 40,000 square meters.",
+      "expected": "CONTRADICTED",
+      "predicted": "SUPPORTED"
+    },
+    {
+      "id": "entity-mismatch",
+      "source": "Northstar acquired Delta Labs.",
+      "claim": "Northstar acquired Omega Labs.",
+      "expected": "CONTRADICTED",
+      "predicted": "CONTRADICTED"
+    },
+    {
+      "id": "absent-customer-count",
+      "source": "Revenue increased 18%.",
+      "claim": "The company serves 340 enterprise customers.",
+      "expected": "NOT_FOUND",
+      "predicted": "NOT_FOUND"
+    },
+    {
+      "id": "absent-headcount",
+      "source": "Gross margin was 67%.",
+      "claim": "The company employs 214 people.",
+      "expected": "NOT_FOUND",
+      "predicted": "NOT_FOUND"
+    },
+    {
+      "id": "partial-support",
+      "source": "Revenue reached $11.4 million.",
+      "claim": "Revenue reached $11.4 million and margin was 67%.",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "CONTRADICTED"
+    },
+    {
+      "id": "negation",
+      "source": "The company did not enter the Japanese market.",
+      "claim": "The company entered the Japanese market.",
+      "expected": "CONTRADICTED",
+      "predicted": "CONTRADICTED"
+    },
+    {
+      "id": "approximate",
+      "source": "Revenue increased 18.1%.",
+      "claim": "Revenue increased approximately 18%.",
+      "expected": "SUPPORTED",
+      "predicted": "SUPPORTED"
+    },
+    {
+      "id": "ambiguous-expansion",
+      "source": "The company entered three new European markets.",
+      "claim": "The company expanded internationally.",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NOT_FOUND"
+    },
+    {
+      "id": "multiple-facts-supported",
+      "source": "Revenue reached $11.4 million and gross margin was 67%.",
+      "claim": "Revenue was $11.4 million with a 67% gross margin.",
+      "expected": "SUPPORTED",
+      "predicted": "SUPPORTED"
+    },
+    {
+      "id": "multiple-facts-mixed",
+      "source": "Revenue reached $11.4 million and gross margin was 67%.",
+      "claim": "Revenue was $11.4 million with a 70% gross margin.",
+      "expected": "CONTRADICTED",
+      "predicted": "CONTRADICTED"
+    },
+    {
+      "id": "employee-count",
+      "source": "Headcount was 214 employees at quarter end.",
+      "claim": "The company had 214 employees at quarter end.",
+      "expected": "SUPPORTED",
+      "predicted": "SUPPORTED"
+    },
+    {
+      "id": "year-supported",
+      "source": "The company launched operations in Spain in 2025.",
+      "claim": "Spanish operations launched in 2025.",
+      "expected": "SUPPORTED",
+      "predicted": "CONTRADICTED"
+    },
+    {
+      "id": "duration-mismatch",
+      "source": "The contract has a three-year term.",
+      "claim": "The contract has a five-year term.",
+      "expected": "CONTRADICTED",
+      "predicted": "SUPPORTED"
+    },
+    {
+      "id": "weak-related",
+      "source": "Operating expenses declined during the quarter.",
+      "claim": "Operating efficiency improved materially.",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW"
+    },
+    {
+      "id": "absent-acquisition",
+      "source": "The company opened a sales office in Paris.",
+      "claim": "The company acquired a French software vendor.",
+      "expected": "NOT_FOUND",
+      "predicted": "NOT_FOUND"
+    },
+    {
+      "id": "negative-value",
+      "source": "Net loss was $2.3 million.",
+      "claim": "Net loss was $2.3 million.",
+      "expected": "SUPPORTED",
+      "predicted": "SUPPORTED"
+    }
+  ]
+}

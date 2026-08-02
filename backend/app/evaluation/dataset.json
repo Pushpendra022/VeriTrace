@@ -1,0 +1,25 @@
+[
+ {"id":"exact-revenue","source":"Total revenue reached $11.4 million.","claim":"Total revenue reached $11.4 million.","expected":"SUPPORTED"},
+ {"id":"paraphrase-growth","source":"Revenue increased 18% year over year.","claim":"Year-over-year revenue growth was 18%.","expected":"SUPPORTED"},
+ {"id":"numeric-mismatch","source":"Revenue reached $11.4 million.","claim":"Revenue reached $14.2 million.","expected":"CONTRADICTED"},
+ {"id":"percentage-mismatch","source":"Revenue increased 18%.","claim":"Revenue increased 22%.","expected":"CONTRADICTED"},
+ {"id":"date-mismatch","source":"The acquisition closed on March 4, 2025.","claim":"The acquisition closed on March 4, 2024.","expected":"CONTRADICTED"},
+ {"id":"currency-mismatch","source":"Sales were €8 million.","claim":"Sales were $8 million.","expected":"CONTRADICTED"},
+ {"id":"unit-mismatch","source":"The facility covers 40,000 square feet.","claim":"The facility covers 40,000 square meters.","expected":"CONTRADICTED"},
+ {"id":"entity-mismatch","source":"Northstar acquired Delta Labs.","claim":"Northstar acquired Omega Labs.","expected":"CONTRADICTED"},
+ {"id":"absent-customer-count","source":"Revenue increased 18%.","claim":"The company serves 340 enterprise customers.","expected":"NOT_FOUND"},
+ {"id":"absent-headcount","source":"Gross margin was 67%.","claim":"The company employs 214 people.","expected":"NOT_FOUND"},
+ {"id":"partial-support","source":"Revenue reached $11.4 million.","claim":"Revenue reached $11.4 million and margin was 67%.","expected":"NEEDS_REVIEW"},
+ {"id":"negation","source":"The company did not enter the Japanese market.","claim":"The company entered the Japanese market.","expected":"CONTRADICTED"},
+ {"id":"approximate","source":"Revenue increased 18.1%.","claim":"Revenue increased approximately 18%.","expected":"SUPPORTED"},
+ {"id":"ambiguous-expansion","source":"The company entered three new European markets.","claim":"The company expanded internationally.","expected":"NEEDS_REVIEW"},
+ {"id":"multiple-facts-supported","source":"Revenue reached $11.4 million and gross margin was 67%.","claim":"Revenue was $11.4 million with a 67% gross margin.","expected":"SUPPORTED"},
+ {"id":"multiple-facts-mixed","source":"Revenue reached $11.4 million and gross margin was 67%.","claim":"Revenue was $11.4 million with a 70% gross margin.","expected":"CONTRADICTED"},
+ {"id":"employee-count","source":"Headcount was 214 employees at quarter end.","claim":"The company had 214 employees at quarter end.","expected":"SUPPORTED"},
+ {"id":"year-supported","source":"The company launched operations in Spain in 2025.","claim":"Spanish operations launched in 2025.","expected":"SUPPORTED"},
+ {"id":"duration-mismatch","source":"The contract has a three-year term.","claim":"The contract has a five-year term.","expected":"CONTRADICTED"},
+ {"id":"weak-related","source":"Operating expenses declined during the quarter.","claim":"Operating efficiency improved materially.","expected":"NEEDS_REVIEW"},
+ {"id":"absent-acquisition","source":"The company opened a sales office in Paris.","claim":"The company acquired a French software vendor.","expected":"NOT_FOUND"},
+ {"id":"negative-value","source":"Net loss was $2.3 million.","claim":"Net loss was $2.3 million.","expected":"SUPPORTED"}
+]
+
